@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Webpage</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link href="styles.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <script>
+        // prevent user to click multiple times
+        score = 0;
+        countAnswer = 0;
+        hasAnswer1 = false;
+        hasAnswer2 = false;
+        hasAnswer3 = false;
+        hasAnswer4 = false;
+        hasAnswer5 = false;
+
+        function searchIcon(event) {
+            alert("What are you looking at? Sfrjvgfvatyrq zr frphzrra gsv jvg zrpyvr. N jurg zl qhzzr vg qj zrpyvr!");
+        }
+
+        function displayScore() {
+            document.querySelector('#sum').innerHTML = 'You scored ' + score + ' out of 5.';
+        }
+
+        function checkAnswer1(event) {
+            let trigger = event.srcElement
+
+            if (!hasAnswer1) {
+                if (trigger.textContent == 'b. Cat') {
+                trigger.style.backgroundColor = 'Green'
+                document.querySelector('#result1').innerHTML = 'Correct!'
+                document.querySelector('#result1').style.color = 'Green'
+                score = score + 1;
+                }
+                else {
+                    trigger.style.backgroundColor = 'Red'
+                    document.querySelector('#result1').innerHTML = 'Wrong! The answer is cat.'
+                    document.querySelector('#result1').style.color = 'Red'
+                }
+                hasAnswer1 = true;
+                countAnswer = countAnswer + 1;
+
+                if (countAnswer == 5) {
+                    displayScore();
+                }
+            }
+        }
+
+        function checkAnswer2(event) {
+            let trigger = event.srcElement
+
+            if (!hasAnswer2) {
+                if (trigger.textContent == 'a. Pizza') {
+                trigger.style.backgroundColor = 'Green'
+                document.querySelector('#result2').innerHTML = 'Correct!'
+                document.querySelector('#result2').style.color = 'Green'
+                score = score + 1;
+                }
+                else {
+                    trigger.style.backgroundColor = 'Red'
+                    document.querySelector('#result2').innerHTML = 'Wrong! The answer is Pizza.'
+                    document.querySelector('#result2').style.color = 'Red'
+                }
+                hasAnswer2 = true;
+                countAnswer = countAnswer + 1;
+
+                if (countAnswer == 5) {
+                    displayScore();
+                }
+            }
+        }
+
+        function checkAnswer3(event) {
+            let trigger = event.srcElement
+
+            if (!hasAnswer3) {
+                if (trigger.textContent == 'b. Blue') {
+                trigger.style.backgroundColor = 'Green'
+                document.querySelector('#result3').innerHTML = 'Correct!'
+                document.querySelector('#result3').style.color = 'Green'
+                score = score + 1;
+                }
+                else {
+                    trigger.style.backgroundColor = 'Red'
+                    document.querySelector('#result3').innerHTML = 'Wrong! The answer is Blue.'
+                    document.querySelector('#result3').style.color = 'Red'
+                }
+                hasAnswer3 = true;
+                countAnswer = countAnswer + 1;
+
+                if (countAnswer == 5) {
+                    displayScore();
+                }
+            }
+        }
+
+        function checkAnswer4(event) {
+            let trigger = event.srcElement
+
+            if (!hasAnswer4) {
+                if (trigger.textContent == 'b. Piano') {
+                trigger.style.backgroundColor = 'Green'
+                document.querySelector('#result4').innerHTML = 'Correct!'
+                document.querySelector('#result4').style.color = 'Green'
+                score = score + 1;
+                }
+                else {
+                    trigger.style.backgroundColor = 'Red'
+                    document.querySelector('#result4').innerHTML = 'Wrong! The answer is Piano.'
+                    document.querySelector('#result4').style.color = 'Red'
+                }
+                hasAnswer4 = true;
+                countAnswer = countAnswer + 1;
+
+                // Output sum of score
+                if (countAnswer == 5) {
+                    displayScore();
+                }
+            }
+        }
+
+        function checkAnswer5(event) {
+            let trigger = event.srcElement
+
+            if (trigger.textContent == 'd. Snake') {
+                trigger.style.backgroundColor = 'Green'
+                document.querySelector('#result5').innerHTML = 'Correct!'
+                document.querySelector('#result5').style.color = 'Green'
+                score = score + 1;
+            }
+            else {
+                trigger.style.backgroundColor = 'Red'
+                document.querySelector('#result5').innerHTML = 'Wrong! The answer is Snake.'
+                document.querySelector('#result5').style.color = 'Red'
+            }
+            hasAnswer5 = true;
+            countAnswer = countAnswer + 1;
+
+            // Output sum of score
+            if (countAnswer == 5) {
+                displayScore();
+            }
+        }
+
+    </script>
+</head>
+<body>
+    <header class="banner container-fluid">
+        <div class="container d-flex justify-content-between align-items-center">
+            <h1 class="text-center fw-bold fs-4 m-0">My Homepage</h1>
+            <nav class="d-flex align-items-center">
+                <a href="index.html" class="px-2">Home</a>
+                <a href="autobiography.html" class="px-2">Autobiography</a>
+                <a href="me-or-not-me.html" class="px-2">Me or Not Me?</a>
+                <a href="contact.html" class="px-2">Contact</a>
+                <button class="btn btn-link search-icon ms-3" onclick="searchIcon(event)" aria-label="Search">&#128269;</button>
+            </nav>
+        </div>
+    </header>
+    <main class="container mt-4">
+        <h1 class="fw-bold mt-4">Me or Not me?</h1>
+        <img src="me2.JPG" alt="Profile Picture" class="rounded-image img-fluid">
+        <h3 class="fw-bold mt-4">The ultimate me quiz!</h3>
+        <div class="new-line">
+            <!-- Question 1 -->
+            <h5 class="mt-3 fw-bold">1. What’s my favourite pet? </h5>
+            <button class="option" onclick="checkAnswer1(event)">a. Dog</button>
+            <button class="option" onclick="checkAnswer1(event)">b. Cat</button>
+            <button class="option" onclick="checkAnswer1(event)">c. Bird</button>
+            <button class="option" onclick="checkAnswer1(event)">d. Fish</button>
+            <p id="result1"></p>
+
+            <!-- Question 2 -->
+            <h5 class="mt-3 fw-bold">2. Which of these foods is my absolute favorite? </h5>
+            <button class="option" onclick="checkAnswer2(event)">a. Pizza</button>
+            <button class="option" onclick="checkAnswer2(event)">b. Sushi</button>
+            <button class="option" onclick="checkAnswer2(event)">c. Tacos</button>
+            <button class="option" onclick="checkAnswer2(event)">d. Ice cream</button>
+            <p id="result2"></p>
+
+            <!-- Question 3 -->
+            <h5 class="mt-3 fw-bold">3. What’s my favourite colour? </h5>
+            <button class="option" onclick="checkAnswer3(event)">a. Red</button>
+            <button class="option" onclick="checkAnswer3(event)">b. Blue</button>
+            <button class="option" onclick="checkAnswer3(event)">c. Green</button>
+            <button class="option" onclick="checkAnswer3(event)">d. Yellow</button>
+            <p id="result3"></p>
+
+            <!--- Question 4 -->
+            <h5 class="mt-3 fw-bold">4. What musical instrument do I play? </h5>
+            <button class="option" onclick="checkAnswer4(event)">a. Guitar</button>
+            <button class="option" onclick="checkAnswer4(event)">b. Piano</button>
+            <button class="option" onclick="checkAnswer4(event)">c. Violin</button>
+            <button class="option" onclick="checkAnswer4(event)">d. Drums</button>
+            <p id="result4"></p>
+
+            <!--- Question 5 -->
+            <h5 class="mt-3 fw-bold">5. What's my biggest fear? </h5>
+            <button class="option" onclick="checkAnswer5(event)">a. Heights</button>
+            <button class="option" onclick="checkAnswer5(event)">b. Spiders</button>
+            <button class="option" onclick="checkAnswer5(event)">c. Public speaking</button>
+            <button class="option" onclick="checkAnswer5(event)">d. Snake</button>
+            <p id="result5"></p>
+            <p id="sum" class="fw-bold"></p>
+        </div>
+    </main>
+</body>
+</html>

@@ -1,0 +1,25 @@
+## HTML Tags (10)
+
+1. **`<h1>` to `<h6>`**: Used for headings of different levels to structure content.
+2. **`<p>`**: Used for paragraphs of text.
+3. **`<a>`**: Used for creating hyperlinks to other pages or sections.
+4. **`<img>`**: Used to embed images.
+5. **`<header>`**: Used to define the header section of the page.
+6. **`<nav>`**: Used to define a navigation menu.
+7. **`<main>`**: Used to define the main content area of the page.
+8. **`<div>`**: Used as a container to group and style other elements.
+9. **`<ul>`**: Used for creating unordered (bulleted) lists.
+10. **`<li>`**: Used to define list items within an unordered list.
+
+## CSS Properties (5)
+
+1. **`background-color`**: Used to set the background color of elements.
+2. **`color`**: Used to set the text color of elements.
+3. **`margin`**: Used to control the space around elements.
+4. **`padding`**: Used to control the space between an element's content and its border.
+5. **`border-radius`**: Used to round the corners of elements.
+
+## JavaScript and Bootstrap Usage
+
+* **JavaScript**: Used to add interactivity to the quiz on the "Me or Not Me?" page, handling answer checking and score calculation.
+* **Bootstrap**: Used to simplify the creation of the website's layout and responsive design, providing pre-built components and styles.
