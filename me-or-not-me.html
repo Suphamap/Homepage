@@ -125,23 +125,25 @@
         function checkAnswer5(event) {
             let trigger = event.srcElement
 
-            if (trigger.textContent == 'd. Snake') {
-                trigger.style.backgroundColor = 'Green'
-                document.querySelector('#result5').innerHTML = 'Correct!'
-                document.querySelector('#result5').style.color = 'Green'
-                score = score + 1;
-            }
-            else {
-                trigger.style.backgroundColor = 'Red'
-                document.querySelector('#result5').innerHTML = 'Wrong! The answer is Snake.'
-                document.querySelector('#result5').style.color = 'Red'
-            }
-            hasAnswer5 = true;
-            countAnswer = countAnswer + 1;
+            if (!hasAnswer5) {
+                if (trigger.textContent == 'd. Snake') {
+                    trigger.style.backgroundColor = 'Green'
+                    document.querySelector('#result5').innerHTML = 'Correct!'
+                    document.querySelector('#result5').style.color = 'Green'
+                    score = score + 1;
+                }
+                else {
+                    trigger.style.backgroundColor = 'Red'
+                    document.querySelector('#result5').innerHTML = 'Wrong! The answer is Snake.'
+                    document.querySelector('#result5').style.color = 'Red'
+                }
+                hasAnswer5 = true;
+                countAnswer = countAnswer + 1;
 
-            // Output sum of score
-            if (countAnswer == 5) {
-                displayScore();
+                // Output sum of score
+                if (countAnswer == 5) {
+                    displayScore();
+                }
             }
         }
 
