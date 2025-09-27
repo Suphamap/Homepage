@@ -12,17 +12,52 @@
             alert("What are you looking at? Sfrjvgfvatyrq zr frphzrra gsv jvg zrpyvr. N jurg zl qhzzr vg qj zrpyvr!");
         }
     </script>
+    <script>
+        function toggleMobileMenu() {
+            const mobileNav = document.getElementById('mobileNav');
+            mobileNav.classList.toggle('show');
+        }
+        
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(event) {
+            const mobileNav = document.getElementById('mobileNav');
+            const hamburgerButton = document.querySelector('.hamburger-menu');
+            
+            if (mobileNav && hamburgerButton && 
+                !mobileNav.contains(event.target) && 
+                !hamburgerButton.contains(event.target) && 
+                mobileNav.classList.contains('show')) {
+                mobileNav.classList.remove('show');
+            }
+        });
+    </script>
 </head>
 <body>
     <header class="banner container-fluid">
         <div class="container d-flex justify-content-between align-items-center">
             <h1 class="text-center fw-bold fs-4 m-0">My Homepage</h1>
-            <nav class="d-flex align-items-center">
+            
+            <!-- Desktop Navigation -->
+            <nav class="desktop-nav d-flex align-items-center">
                 <a href="index.html" class="px-2">Home</a>
                 <a href="autobiography.html" class="px-2">Autobiography</a>
                 <a href="me-or-not-me.html" class="px-2">Me or Not Me?</a>
                 <a href="contact.html" class="px-2">Contact</a>
                 <button class="btn btn-link search-icon ms-3" onclick="searchIcon(event)" aria-label="Search">&#128269;</button>
+            </nav>
+            
+            <!-- Mobile Hamburger Menu Button -->
+            <button class="hamburger-menu" onclick="toggleMobileMenu()" aria-label="Toggle menu">
+                ☰
+            </button>
+            
+            <!-- Mobile Navigation Menu -->
+            <nav class="mobile-nav" id="mobileNav">
+                <a href="index.html">Home</a>
+                <a href="autobiography.html">Autobiography</a>
+                <a href="me-or-not-me.html">Me or Not Me?</a>
+                <a href="contact.html">Contact</a>
+                <button onclick="searchIcon(event)" aria-label="Search">🔍 Search</button>
             </nav>
         </div>
     </header>
